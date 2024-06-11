@@ -11,6 +11,7 @@ st.write(
     ":dog: Try uploading an image to watch the background magically removed. Full quality images can be downloaded from the sidebar. This code is open source and available [here](https://github.com/tyler-simons/BackgroundRemoval) on GitHub. Special thanks to the [rembg library](https://github.com/danielgatis/rembg) :grin:"
 )
 st.write("## Upload and download :gear:")
+my_upload = st.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])
 
 MAX_FILE_SIZE = 5 * 1024 * 1024  # 5MB
 
@@ -35,7 +36,6 @@ def fix_image(upload):
 
 
 col1, col2 = st.columns(2)
-my_upload = st.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])
 
 if my_upload is not None:
     if my_upload.size > MAX_FILE_SIZE:
