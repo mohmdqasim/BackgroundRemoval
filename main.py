@@ -6,8 +6,7 @@ import base64
 
 st.set_page_config(layout="wide", page_title="Image Background Remover")
 
-st.write("## Remove background from your image")
-st.write("## Upload and download :gear:")
+st.write("## Remove background from your image :gear:")
 my_upload = st.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])
 
 MAX_FILE_SIZE = 5 * 1024 * 1024  # 5MB
